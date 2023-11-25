@@ -40,3 +40,20 @@
 6. MNLI：三分类任务，判断两句关系：包含、矛盾和中立。输入句子对，一个为条件，另一个为假设。
 7. QNLI：二分类，判断问题和句子之间是否为包含关系。
 8. RTE：二分类，判断句子对是否互为包含关系。
+
+
+## RE LLM 
+> Leaderboard from [OpenCompass]([https://opencompass.org.cn/leaderboard-llm](https://paperswithcode.com/sota/relation-extraction-on-docred))
+
+|              Model                |      F1     |     Ign F1     | Extra Training Data |
+| :-------------------------------- | :---------: | :------------: | :-----------------: |
+| [DREEAM](https://paperswithcode.com/paper/dreeam-guiding-attention-with-evidence-for)                            |    67.53    |     65.47      |   NONE  |
+| [KD-Rb-I](https://paperswithcode.com/paper/document-level-relation-extraction-with-4)                           |    67.28    |     65.24      |   NONE  |
+| [SSAN-RoBERTa-large+Adaptation](https://paperswithcode.com/paper/entity-structure-within-and-throughout)     |    65.92    |     63.78      |   NONE  |
+| [SAIS-RoBERTa-large](https://paperswithcode.com/paper/sais-supervising-and-augmenting-intermediate)                |    65.11    |     63.44      |   NONE  |
+| [Eider-RoBERTa-large](https://paperswithcode.com/paper/eider-evidence-enhanced-document-level)               |    64.79    |     62.85      |   NONE  |
+|[DocuNet-RoBERTa-large](https://paperswithcode.com/paper/document-level-relation-extraction-as)             |    64.55    |     62.40      |   NONE  |
+|[CGM2IR-RoBERTalarge](https://paperswithcode.com/paper/document-level-relation-extraction-with-2)               |    63.89    |     61.96      |   NONE  |
+| [SETE-Roberta-large](https://paperswithcode.com/paper/document-level-relation-extraction-with-6)                |    63.74    |     61.78      |   NONE  |
+
+
