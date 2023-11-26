@@ -41,8 +41,29 @@
 7. QNLI：二分类，判断问题和句子之间是否为包含关系。
 8. RTE：二分类，判断句子对是否互为包含关系。
 
+## Named Entity Recognition
+> F1 for all, [sentence-level] / [document-level]<br>
+> Flat NER: CoNLL2003, OntoNotes<br>
+> Nested NER: ACE2004, ACE2005, Genia<br>
+> Social Media: WNUT-16, WNUT-17<br>
+> Biomedical: BC5CDR, NCB
 
-## RE LLM 
+| Method                                                                                           |                                                                         Model                                                                          | Org.                                           | CoNLL03 (English) | OntoNotes  | WNUT-16 | WNUT-17 | BC5CDR |                              NCBI                               |  ACE2004   |  ACE2005   |   Genia    | KBP17 |
+| :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------: | ---------------------------------------------- | :---------------: | :--------: | :-----: | :-----: | :----: | :-------------------------------------------------------------: | :--------: | :--------: | :--------: | ----- |
+| [ACE](https://arxiv.org/pdf/2010.05006v4.pdf)                                                    |                                                              BiLSTM-CRF + BiLSTM-Biaffine                                                              | ShanghaiTech,UCAS, DAMO                        |       94.6        |            |         |         |        |                                                                 |            |            |            |       |
+| [CL-KL](https://arxiv.org/pdf/2105.03654v3.pdf)                                                  |                                                                     Bio-BERT + CRF                                                                     | DAMO                                           |    93.56/94.12    |            |  58.98  |  60.45  | 90.93  |                              88.96                              |            |            |            |       |
+| [PIQN](https://arxiv.org/pdf/2203.10545v1.pdf)                                                   |                                                                      BERT+2BiLSTM                                                                      | ZJU, DAMO                                      |       92.87       |   90.96    |         |         |        |                                                                 |   88.14    |   87.42    |   81.77    | 84.50 |
+| [Locate and Label](https://arxiv.org/pdf/2105.06804v2.pdf)                                       |                                                                    BERT-large-cased                                                                    | ZJU, USTC                                      |       92.94       |            |         |         |        |                                                                 |   87.41    |   86.67    |   80.54    | 84.05 |
+| [paper](https://arxiv.org/pdf/2106.01223v1.pdf)                                                  |                                                                       BART-large                                                                       | FDU                                            |       93.24       |   90.38    |         |         |        |                                                                 |   86.84    |   84.74    |   79.23    |       |
+| [Named Entity Recognition as Dependency Parsing](https://aclanthology.org/2020.acl-main.577.pdf) | BERT-Large + [fastText embeddings](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00051/43387/Enriching-Word-Vectors-with-Subword-Information) | Queen Mary University, Google Research         |     92.5/93.5     | 89.83/91.3 |         |         |        |                                                                 | 85.67/86.7 | 84.61/85.4 | 78.87/80.5 |       |
+| [paper](https://arxiv.org/pdf/1908.06926v1.pdf)                                                  |                                                                   seq2seq+BERT+Flair                                                                   | Charles University                             |       93.00       |            |         |         |        |                                                                 |   84.40    |   84.33    |   78.31    |       |
+| [BioFLAIR](https://arxiv.org/pdf/1908.05760.pdf)                                                 |                                                                        BioFLAIR (V1)+BioELMo                                                                        | Manipal Institute of Technology, Elsevier Labs |                   |            |         |         | 89.42  |                              88.85                              |            |            |            |       |
+| [BioBERT](https://arxiv.org/pdf/1901.08746.pdf)                                                  |                                                                        BioBERT                                                                         | Korea University, Clova AI                     |                   |            |         |         |        | [87.70(token-level F1)](https://arxiv.org/pdf/2105.03654v3.pdf) |            |            |            |       |
+
+
+
+
+## RE 
 > Leaderboard from [OpenCompass]([https://opencompass.org.cn/leaderboard-llm](https://paperswithcode.com/sota/relation-extraction-on-docred))
 
 |              Model                |      F1     |     Ign F1     | Extra Training Data |
@@ -55,16 +76,4 @@
 |[DocuNet-RoBERTa-large](https://paperswithcode.com/paper/document-level-relation-extraction-as)             |    64.55    |     62.40      |   NONE  |
 |[CGM2IR-RoBERTalarge](https://paperswithcode.com/paper/document-level-relation-extraction-with-2)               |    63.89    |     61.96      |   NONE  |
 | [SETE-Roberta-large](https://paperswithcode.com/paper/document-level-relation-extraction-with-6)                |    63.74    |     61.78      |   NONE  |
-## NER LLM 
-> Single-task single models on CoNLL 2003 (English)
-
-|              Model                |      F1  ⬆ |   Extra Training Data |
-| :-------------------------------- | :---------: |  :-----------------: |
-| [ACE + document-context](https://arxiv.org/pdf/2010.05006v4.pdf)                                                 |    94.6    |     NONE  |
-| [CL-KL](https://arxiv.org/pdf/2105.03654v3.pdf)                                                               |   93.85    |    NONE  |
-| [Cross-sentence context](https://arxiv.org/pdf/2006.01563v2.pdf)                                                 |    93.74  |    NONE  |
-| [LSTM-CRF+ELMo+BERT+Flair](https://arxiv.org/pdf/1908.06926v1.pdf)                                         |   93.38     |  NONE  |
-| [Hierarchical + BERT](https://arxiv.org/pdf/1911.02257v2.pdf)                                                    |    93.37   |    NONE  |
-|[BARTNER](https://arxiv.org/pdf/2106.01223v1.pdf)                                                                  |   93.24    |     NONE  |
-|[Locate and Label](https://arxiv.org/pdf/2105.06804v2.pdf)                                                     |   92.94 |   NONE  |
-| [PIQN](https://arxiv.org/pdf/2203.10545v1.pdf)                                                                |   92.87   |    NONE  |
+                                                        |   92.87   |    NONE  |
