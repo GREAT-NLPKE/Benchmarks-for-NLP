@@ -55,5 +55,16 @@
 |[DocuNet-RoBERTa-large](https://paperswithcode.com/paper/document-level-relation-extraction-as)             |    64.55    |     62.40      |   NONE  |
 |[CGM2IR-RoBERTalarge](https://paperswithcode.com/paper/document-level-relation-extraction-with-2)               |    63.89    |     61.96      |   NONE  |
 | [SETE-Roberta-large](https://paperswithcode.com/paper/document-level-relation-extraction-with-6)                |    63.74    |     61.78      |   NONE  |
+## NER LLM 
+> Single-task single models on CoNLL 2003 (English)
 
-
+|              Model                |      F1  ⬆ |   Extra Training Data |
+| :-------------------------------- | :---------: |  :-----------------: |
+| [ACE + document-context](https://arxiv.org/pdf/2010.05006v4.pdf)                                                 |    94.6    |     NONE  |
+| [CL-KL](https://arxiv.org/pdf/2105.03654v3.pdf)                                                               |   93.85    |    NONE  |
+| [Cross-sentence context](https://arxiv.org/pdf/2006.01563v2.pdf)                                                 |    93.74  |    NONE  |
+| [LSTM-CRF+ELMo+BERT+Flair](https://arxiv.org/pdf/1908.06926v1.pdf)                                         |   93.38     |  NONE  |
+| [Hierarchical + BERT](https://arxiv.org/pdf/1911.02257v2.pdf)                                                    |    93.37   |    NONE  |
+|[BARTNER](https://arxiv.org/pdf/2106.01223v1.pdf)                                                                  |   93.24    |     NONE  |
+|[Locate and Label](https://arxiv.org/pdf/2105.06804v2.pdf)                                                     |   92.94 |   NONE  |
+| [PIQN](https://arxiv.org/pdf/2203.10545v1.pdf)                                                                |   92.87   |    NONE  |
