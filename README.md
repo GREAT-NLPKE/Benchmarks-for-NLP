@@ -77,3 +77,24 @@
 | [CL-KL](https://arxiv.org/pdf/2105.03654v3.pdf)  |    Bio-BERT + CRF     |                      DAMO                      |           ACL2021            | 90.93  |                              88.96                              |
 | [BioFLAIR](https://arxiv.org/pdf/1908.05760.pdf) | BioFLAIR (V1)+BioELMo | Manipal Institute of Technology, Elsevier Labs |             Arxiv2019             | 89.42  |                              88.85                              |
 | [BioBERT](https://arxiv.org/pdf/1901.08746.pdf)  |        BioBERT        |           Korea University, Clova AI           | Oxford University Press 2020 |        | [87.70(token-level F1)](https://arxiv.org/pdf/2105.03654v3.pdf) |
+
+
+## Relation Extraction
+> RE F1 for all<br>
+> **DocRED** is a large scale dataset constructed from Wikipedia and Wikidata. <br>
+> **CDR**(Chemical-Disease Reactions) is a biomedical dataset constructed using PubMed abstracts. <br>
+> **GDA**(Gene-Disease Associations) is also a binary relation classification task that identify Gene and Disease concepts interactions.
+### Document-level
+| Method                                           |     Model     |                    Org.                    |    Year    | DocRED |
+| :----------------------------------------------- | :-----------: | :----------------------------------------: | :--------: | :----: |
+| [DREEAM](https://arxiv.org/pdf/2302.08675v1.pdf) | RoBERTa-large |       Tokyo Institute of Technology        |  ACL2023   | 67.53  |
+| [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)   | RoBERTa-large |                USTC, Baidu                 |  AAAI2021  | 65.92  |
+| [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)   | RoBERTa-large |               CMU, Stanford                | NAACL 2022 | 65.11  |
+| [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf)  | RoBERTa-large | University of Illinois at Urbana-Champaign |  ACL2022   | 64.79 |
+
+### Biomedical
+| Method                                          |  Model  |                    Org.                    |    Year    |  CDR  | GDA   |
+| :---------------------------------------------- | :-----: | :----------------------------------------: | :--------: | :---: | ----- |
+| [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)  | SciBERT |               CMU, Stanford                | NAACL 2022 | 79.0  | 87.1  |
+| [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf) | SciBERT | University of Illinois at Urbana-Champaign |  ACL2022   | 70.63 | 84.54 |
+| [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)  | SciBERT |                USTC, Baidu                 |  AAAI2021  | 68.7  | 83.7  |
