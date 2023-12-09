@@ -98,3 +98,12 @@
 | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)  | SciBERT |               CMU, Stanford                | NAACL 2022 | 79.0  | 87.1  |
 | [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf) | SciBERT | University of Illinois at Urbana-Champaign |  ACL2022   | 70.63 | 84.54 |
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)  | SciBERT |                USTC, Baidu                 |  AAAI2021  | 68.7  | 83.7  |
+
+## Key Information Extraction
+> **CORD** is a Consolidated Receipt Dataset for Post-OCR Parsing. <br>
+
+|            Model         |    Year    |  F1 |
+| :------------------------|  :--------: | :---: |
+| [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  CVPR 2023 | 97.97  |
+| [LayoutLMv3 Large](https://arxiv.org/pdf/2204.08387v3.pdf) |  18 Apr 2022  | 97.46 | 
+| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)  | ACL 2022   | 96.07  |
