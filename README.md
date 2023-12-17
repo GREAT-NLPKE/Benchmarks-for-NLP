@@ -101,9 +101,10 @@
 
 ## Key Information Extraction
 > **CORD** is a Consolidated Receipt Dataset for Post-OCR Parsing. <br>
-
-|            Model         |    Year    |  F1 |
-| :------------------------|  :--------: | :---: |
-| [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  CVPR 2023 | 97.97  |
-| [LayoutLMv3 Large](https://arxiv.org/pdf/2204.08387v3.pdf) |  18 Apr 2022  | 97.46 | 
-| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)  | ACL 2022   | 96.07  |
+> F1 for all.<br>
+### Task of SER 
+|            Model         |    Year    |  CORD |FUNSD |
+| :------------------------|  :--------: | :---: |:---: |
+| [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  CVPR 2023 | 97.97  |92.86  |
+| [LayoutLMv3 Large](https://arxiv.org/pdf/2204.08387v3.pdf) |  18 Apr 2022  | 97.46 | 92.08 | 
+| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)  | ACL 2022   | 96.07  |- | 
