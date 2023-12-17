@@ -101,8 +101,9 @@
 
 ## Key Information Extraction
 > **CORD** is a Consolidated Receipt Dataset for Post-OCR Parsing. <br>
+> **FUNSD** is a Form Understanding in Noisy Scanned Documents (FUNSD) comprises 199 real, fully annotated, scanned forms. <br>
 > F1 for all.<br>
-### Task of SER 
+### Task : SER 
 |            Model         |    Year    |  CORD |FUNSD |
 | :------------------------|  :--------: | :---: |:---: |
 | [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  CVPR 2023 | 97.97  |92.86  |
