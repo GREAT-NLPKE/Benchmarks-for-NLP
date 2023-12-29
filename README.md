@@ -91,6 +91,7 @@
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)   | RoBERTa-large |                USTC, Baidu                 |  AAAI2021  | 65.92  |
 | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)   | RoBERTa-large |               CMU, Stanford                | NAACL 2022 | 65.11  |
 | [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf)  | RoBERTa-large | University of Illinois at Urbana-Champaign |  ACL2022   | 64.79 |
+| [AARE](https://arxiv.org/pdf/2310.18604.pdf)     | RoBERTa-large |              Beihang University            |  EMNLP2023 | 65.19 |
 
 ### Biomedical
 | Method                                          |  Model  |                    Org.                    |    Year    |  CDR  | GDA   |
