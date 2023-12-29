@@ -103,9 +103,10 @@
 > **CORD** is a Consolidated Receipt Dataset for Post-OCR Parsing. <br>
 > **FUNSD** is a Form Understanding in Noisy Scanned Documents (FUNSD) comprises 199 real, fully annotated, scanned forms. <br>
 > F1 for all.<br>
-### Task : SER 
-|            Model         |    Year    |  CORD |FUNSD |
-| :------------------------|  :--------: | :---: |:---: |
-| [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  CVPR 2023 | 97.97  |92.86  |
-| [LayoutLMv3 Large](https://arxiv.org/pdf/2204.08387v3.pdf) |  18 Apr 2022  | 97.46 | 92.08 | 
-| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)  | ACL 2022   | 96.07  |- | 
+
+|            Model         |   Org.   | Year    |  CORD |FUNSD |
+| :------------------------|  :--------: |:--------: | :---: |:---: |
+| [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  DAMO Academy, Alibaba Group|CVPR 2023 | 97.97  |92.86  |
+| [LayoutLMv3 Large](https://arxiv.org/pdf/2204.08387v3.pdf) | Sun Yat-sen University,Microsoft Research Asia|18 Apr 2022  | 97.46 | 92.08 | 
+| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)  |South China University of Technology|ACL 2022   | 96.07  |- | 
+| [GenKIE](https://arxiv.org/pdf/2310.16131.pdf)  |University of Michigan,National University of Defense Technology|EMNLP 2023   | 95.75  |83.45 | 
