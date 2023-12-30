@@ -14,6 +14,7 @@
     - [Biomedical](#biomedical)
   - [Key Information Extraction](#key-information-extraction)
   - [Link Prediction](#link-prediction)
+    - [WN18RR](#wn18rr)
 
 <!-- /TOC -->
 
@@ -139,9 +140,10 @@
 | [StrucText](https://dl.acm.org/doi/10.1145/3474085.3475345)                                                                                                   |                               Baidu                               | ACM MM 2021 |  T+L+V   |                 96.88                  |   -   | 83.09 |
 
 ## Link Prediction
-MRR: mean reciprocal rank
-Hits@k: H@k for brevity
-**WN18RR**
+> MRR: mean reciprocal rank<br>
+> Hits@k: H@k for brevity<br>
+
+### WN18RR
 | Model                                                            |      Method       |                    Org.                    |     Year     | MRR  | H@1  | H@3  | H@10 |
 | :--------------------------------------------------------------- | :---------------: | :----------------------------------------: | :----------: | :--: | :--: | :--: | :--: |
 | [MoCoSA](https://arxiv.org/pdf/2308.08204v1.pdf)                 | description-based |            Kuaishou Technology             |     2023     | 69.6 | 62.4 | 73.7 | 82.0 |
