@@ -100,13 +100,16 @@
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)  | SciBERT |                USTC, Baidu                 |  AAAI2021  | 68.7  | 83.7  |
 
 ## Key Information Extraction
+> **SROIE** : Scanned receipts OCR and information extraction <br>
 > **CORD** is a Consolidated Receipt Dataset for Post-OCR Parsing. <br>
 > **FUNSD** is a Form Understanding in Noisy Scanned Documents (FUNSD) comprises 199 real, fully annotated, scanned forms. <br>
 > F1 for all.<br>
 
-|            Model         |   Org.   | Year    |  CORD |FUNSD |
-| :------------------------|  :--------: |:--------: | :---: |:---: |
-| [GeoLayoutLM](https://arxiv.org/pdf/2304.10759v1.pdf)  |  DAMO Academy, Alibaba Group|CVPR 2023 | 97.97  |92.86  |
-| [LayoutLMv3 Large](https://arxiv.org/pdf/2204.08387v3.pdf) | Sun Yat-sen University,Microsoft Research Asia|18 Apr 2022  | 97.46 | 92.08 | 
-| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)  |South China University of Technology|ACL 2022   | 96.07  |- | 
-| [GenKIE](https://arxiv.org/pdf/2310.16131.pdf)  |University of Michigan,National University of Defense Technology|EMNLP 2023   | 95.75  |83.45 | 
+| Model                                                                                                                                                         |                               Org.                                |    Year     | Modality | [SROIE](https://rrc.cvc.uab.es/?ch=13) | [CORD](https://github.com/clovaai/cord)  | [FUNSD](https://guillaumejaume.github.io/FUNSD/) |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------: | :---------: | :------: | :------------------------------------: | :---: | :---: |
+| [GeoLayoutLM-Large](https://arxiv.org/pdf/2304.10759v1.pdf)                                                                                                   |                               DAMO                                |  CVPR 2023  |  T+L+V   |                   -                    | 97.97 | 92.86 |
+| [LayoutLMv3](https://arxiv.org/pdf/2204.08387v3.pdf)                                                                                                          |          Sun Yat-sen University, Microsoft Research Asia          | ACM MM 2022 |  T+L+V   |                 95.30                  | 96.56 | 90.29 |
+| [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)                                                                                                                |                               SCUT                                |  ACL 2022   |  T+L+V   |                 97.65                  | 95.11 |   -   |
+| [GenKIE](https://arxiv.org/pdf/2310.16131.pdf)                                                                                                                | University of Michigan, National University of Defense Technology | EMNLP 2023  |  T+L+V   |                 97.40                  | 95.75 | 83.45 |
+| [DocFormer](https://openaccess.thecvf.com/content/ICCV2021/papers/Appalaraju_DocFormer_End-to-End_Transformer_for_Document_Understanding_ICCV_2021_paper.pdf) |                              AWS AI                               |  ICCV2021   |  T+L+V   |                   -                    | 96.33 | 83.34 |
+| [StrucText](https://dl.acm.org/doi/10.1145/3474085.3475345)                                                                                                   |                               Baidu                               | ACM MM 2021 |  T+L+V   |                 96.88                  |   -   | 83.09 |
