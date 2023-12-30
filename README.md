@@ -17,7 +17,7 @@
     - [WN18RR](#wn18rr)
 
 <!-- /TOC -->
-
+<!-- /TOC -->
 ## Open-Source LLM (10-35B, Chinese & English)
 > Leaderboard from [OpenCompass](https://opencompass.org.cn/leaderboard-llm)
 
@@ -144,6 +144,7 @@
 > Hits@k: H@k for brevity<br>
 
 ### WN18RR
+
 | Model                                                            |      Method       |                    Org.                    |     Year     | MRR  | H@1  | H@3  | H@10 |
 | :--------------------------------------------------------------- | :---------------: | :----------------------------------------: | :----------: | :--: | :--: | :--: | :--: |
 | [MoCoSA](https://arxiv.org/pdf/2308.08204v1.pdf)                 | description-based |            Kuaishou Technology             |     2023     | 69.6 | 62.4 | 73.7 | 82.0 |
