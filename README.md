@@ -115,6 +115,12 @@
 | [KD-DocRE](https://aclanthology.org/2022.findings-acl.132.pdf) | RoBERTa-large |   DAMO, National University of Singapore   |  ACL2022   |                      64.28                      |                          78.65                           |
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)                 | RoBERTa-large |                USTC, Baidu                 |  AAAI2021  |                      61.42                      |                            -                             |
 
+### Sentence-level
+| Method                                          |  Model  |                    Org.                    |    Year    |  TACRED   |  SemEval |
+| :---------------------------------------------- | :-----: | :----------------------------------------: | :--------: | :-------: |   -----  |
+| [SuRE](https://arxiv.org/pdf/2205.09837.pdf)    | PEGASUS |     University of Southern California      | EMNLP 2022 |     75.1  |    89.7  |
+| [GPT-RE](https://arxiv.org/pdf/2305.02105.pdf)  | GPT3    |        Kyoto University                    | EMNLP 2023 |    70.97  |   91.82  |
+
 
 ### Biomedical
 | Method                                          |  Model  |                    Org.                    |    Year    |  CDR  | GDA   |
