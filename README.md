@@ -118,8 +118,9 @@
 ### Sentence-level
 | Method                                          |  Model  |                    Org.                    |    Year    |  TACRED   |  SemEval |
 | :---------------------------------------------- | :-----: | :----------------------------------------: | :--------: | :-------: |   -----  |
-| [SuRE](https://arxiv.org/pdf/2205.09837.pdf)    | PEGASUS |     University of Southern California      | EMNLP 2022 |     75.1  |    89.7  |
+| [SuRE](https://arxiv.org/pdf/2205.09837.pdf)    | PEGASUS |     University of Southern California      | EMNLP 2022 |    75.1   |    89.7  |
 | [GPT-RE](https://arxiv.org/pdf/2305.02105.pdf)  | GPT3    |        Kyoto University                    | EMNLP 2023 |    70.97  |   91.82  |
+| [NLI](https://aclanthology.org/2021.emnlp-main.92.pdf)  | DeBERTa    |        Ixa NLP Group,UPV/EHU    | EMNLP 2021 |    73.9   |     -    |
 
 
 ### Biomedical
