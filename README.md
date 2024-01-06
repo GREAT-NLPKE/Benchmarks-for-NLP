@@ -157,14 +157,19 @@
 
 ## ERE
 
-|		Method              |Model       |     Year     |		    |	Ace05 |       |	      |	Ace04	|       |	      |	SciERC|       |
-| --------------------- |------------|--------------|------ |------ |------ |------ |------ |------ |------ |------ |------ |
-|                       |            |              | Ent	  |	Rel	  |	Rel+	|	Ent  	|	Rel	  |	Rel+	|	Ent	  |	Rel	  |	Rel+  |
-|	HGERE	                |   bert     | EMNLP 2023   |	90.2	|	70.7	|	67.5	|	89.9	|	68.2	|	64.2	|	74.9	|	55.7	|	43.6  |
-|	HGERE	                |   albert   | EMNLP 2023   |	91.9	|	73.5	|	70.8	|	91.9	|	71.9	|	68.3	|		    |		    |	      |
-|	GCN	                  |   bert     | ACL 2019     |	90.2	|	69.6	|	66.5	|	90	  |	67.6	|	63.5	|	74.1	|	54.8	|	42.9  |
-|	GCN	                  |   albert   | ACL 2019     |	91.7	|	73.1	|	69.9	|	92	  |	71.5	|	67.9	|		    |		    |	      |
-|	MFVI	                |   bert     | ACL 2021     |	90.2	|	69.7	|	67.1	|	89.7	|	67.4	|	63.4	|	73.3	|	54.7	|	42.5  |
-|	MFVI	                |   albert   | ACL 2021     |	91.6	|	72.7	|	70.1	|	89.9	|	68.5	|	65.1	|		    |		    |	      |
-|	PL_Marker(re)         |   bert	   | ACL 2022     |	90	  |	69.8	|	66.7	|	89.5	|	66.6	|	62.1	|	71.3	|	52.3	|	40.2  |
-|	PL_Marker(re)	        |   albert   | ACL 2022     |	91.5	|	72.9	|	70.2	|	91.6	|	70.2	|	66.6	|		    |		    |	      |
+|		                                Method                                |Model       |     Year     |		    |	Ace05 |       |	      |	Ace04	|       |	      |	SciERC|       |
+| ----------------------------------------------------------------------- |------------|--------------|------ |------ |------ |------ |------ |------ |------ |------ |------ |
+|                                                                         |            |              | Ent	  |	Rel	  |	Rel+	|	Ent  	|	Rel	  |	Rel+	|	Ent	  |	Rel	  |	Rel+  |
+|	[HGERE](https://aclanthology.org/2023.emnlp-main.467.pdf)	              |   bert     |   EMNLP 2023 |	90.2	|	70.7	|	67.5	|	89.9	|	68.2	|	64.2	|	74.9	|	55.7	|	43.6  |
+|	[HGERE](https://aclanthology.org/2023.emnlp-main.467.pdf)	              |   albert   |   EMNLP 2023 |	91.9	|	73.5	|	70.8	|	91.9	|	71.9	|	68.3	|		    |		    |	      |
+|	[GCN](https://aclanthology.org/P19-1131.pdf)                            |   bert     |   ACL 2019   |	90.2	|	69.6	|	66.5	|	90	  |	67.6	|	63.5	|	74.1	|	54.8	|	42.9  |
+|	[GCN](https://aclanthology.org/P19-1131.pdf)	                          |   albert   |   ACL 2019   |	91.7	|	73.1	|	69.9	|	92	  |	71.5	|	67.9	|		    |		    |	      |
+|	[Nguyen et al., 2021](https://aclanthology.org/2021.naacl-main.3.pdf)   |   bert     |   ACL 2021   | 88.9  |	68.9  |	      |		    |		    |	      |		    |		    |	      |
+| [Wang and Lu, 2020](https://aclanthology.org/D19-1585.pdf)              |   bert     |   ACL 2019   |	88.6  |	63.4  |	      |		    |		    |	      |	67.5  |	48.4  |	      |
+| [Wang and Lu, 2020](https://aclanthology.org/D19-1585.pdf)              |   albert   |   ACL 2019   |	89.5 	|	67.6	|	64.3	|	88.6  |	63.3	|	59.6	|		    |		    |	      |
+| [Zhong and Chen, 2021](https://aclanthology.org/2021.naacl-main.5.pdf)  |   bert     |   ACL 2021   |	90.1	|	67.7	|	64.8	|	89.2	|	63.9	|	60.1	|	68.9	|	50.1	|	36.8  |
+| [Zhong and Chen, 2021](https://aclanthology.org/2021.naacl-main.5.pdf)  |   albert   |   ACL 2021   |	90.9  |	69.4	|	67.0  |	90.3  |	66.1  |	62.2	|		    |		    |	      |
+|	MFVI	                                                                  |   bert     |              |	90.2	|	69.7	|	67.1	|	89.7	|	67.4	|	63.4	|	73.3	|	54.7	|	42.5  |
+|	MFVI	                                                                  |   albert   |              |	91.6	|	72.7	|	70.1	|	89.9	|	68.5	|	65.1	|		    |		    |	      |
+|	[PL_Marker(re)](https://aclanthology.org/2022.acl-long.337.pdf)         |   bert	   |   ACL 2022   |	90	  |	69.8	|	66.7	|	89.5	|	66.6	|	62.1	|	71.3	|	52.3	|	40.2  |
+|	[PL_Marker(re)](https://aclanthology.org/2022.acl-long.337.pdf)	        |   albert   |   ACL 2022   |	91.5	|	72.9	|	70.2	|	91.6	|	70.2	|	66.6	|		    |		    |	      |
