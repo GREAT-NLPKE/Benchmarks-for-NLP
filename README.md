@@ -146,7 +146,7 @@
 ### WN18RR
 
 | Model                                                            |      Method       |                    Org.                    |     Year     | MRR  | H@1  | H@3  | H@10 |
-| :--------------------------------------------------------------- | :---------------: | :----------------------------------------: | :----------: | :--: | :--: | :--: | :--: |
+| -------- | :---------------: | :----------------------------------------: | :----------: | :--: | :--: | :--: | :--: |
 | [MoCoSA](https://arxiv.org/pdf/2308.08204v1.pdf)                 | description-based |            Kuaishou Technology             |     2023     | 69.6 | 62.4 | 73.7 | 82.0 |
 | [SimKGC](https://arxiv.org/pdf/2203.02167.pdf)                   | description-based | Microsoft Research Asia, Yuanfudao AI Lab  |   ACL 2022   | 67.1 | 58.7 | 73.1 | 81.7 |
 | [CSPromp-KG](https://aclanthology.org/2023.findings-acl.729.pdf) |  structure-based  |      Nanyang Technological University      |   ACL 2023   | 57.5 | 52.2 | 59.6 | 67.8 |
@@ -154,3 +154,18 @@
 | [NBFNet](https://arxiv.org/pdf/2106.06935v4.pdf)                 |                   |         Mila - Québec AI Institute         | NeurIPS 2021 | 55.1 | 49.7 | 57.3 | 66.6 |
 | [C-LMKE](https://arxiv.org/pdf/2206.12617.pdf)                   | description-based |              Fudan University              |  IJCAI 2022  | 59.8 | 48.0 | 67.5 | 80.6 |
 | [TuckER](https://aclanthology.org/D19-1522.pdf)                  |  structure-based  | University of Edinburgh, Samsung AI Centre | COLING 2019  | 47.0 | 44.3 | 48.2 | 52.6 |
+
+### ERE
+
+
+|Model                  |	Ace05					        |	Ace04					        |	SciERC				
+|		                    |	Ent	  |	Rel	  |	Rel+  |	Ent	  |	Rel	  |	Rel+	|	Ent	  |	Rel	  |	Rel+
+|	HGERE(bert)	          |	90.2	|	70.7	|	67.5	|	89.9	|	68.2	|	64.2	|	74.9	|	55.7	|	43.6
+|	HGERE(albert)	        |	91.9	|	73.5	|	70.8	|	91.9	|	71.9	|	68.3	|		    |		    |	
+|	GCN(bert)	            |	90.2	|	69.6	|	66.5	|	90	  |	67.6	|	63.5	|	74.1	|	54.8	|	42.9
+|	GCN(albert)	          |	91.7	|	73.1	|	69.9	|	92	  |	71.5	|	67.9	|		    |		    |	
+|	MFVI(bert)	          |	90.2	|	69.7	|	67.1	|	89.7	|	67.4	|	63.4	|	73.3	|	54.7	|	42.5
+|	MFVI(albert)	        |	91.6	|	72.7	|	70.1	|	89.9	|	68.5	|	65.1	|		    |		    |	
+|	PL_Marker(re)(bert)	  |	90	  |	69.8	|	66.7	|	89.5	|	66.6	|	62.1	|	71.3	|	52.3	|	40.2
+|	PL_Marker(re)(albert)	|	91.5	|	72.9	|	70.2	|	91.6	|	70.2	|	66.6	|		    |		    |	
+
