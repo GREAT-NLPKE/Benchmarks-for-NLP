@@ -11,14 +11,13 @@
     - [Biomedical NER](#biomedical-ner)
   - [Relation Extraction](#relation-extraction)
     - [Document-level](#document-level)
+    - [Sentence-level](#sentence-level)
     - [Biomedical](#biomedical)
+  - [Joint Entity and Relation Extraction](#joint-entity-and-relation-extraction)
   - [Key Information Extraction](#key-information-extraction)
   - [Link Prediction](#link-prediction)
     - [WN18RR](#wn18rr)
-  - [ERE](#ere)
 
-<!-- /TOC -->
-<!-- /TOC -->
 <!-- /TOC -->
 ## Open-Source LLM (10-35B, Chinese & English)
 > Leaderboard from [OpenCompass](https://opencompass.org.cn/leaderboard-llm)
@@ -71,6 +70,7 @@
 
 
 ### Flat NER
+
 | Method                                                                                           |                                                                         Model                                                                          |                  Org.                  |   Year    | [CoNLL03(Eng)](https://data.deepai.org/conll2003.zip) | [OntoNotes]( https://github.com/yhcc/OntoNotes-5.0-NER) |
 | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------: | :-------: | :---------------------------------------------------: | :-----------------------------------------------------: |
 | [ACE](https://arxiv.org/pdf/2010.05006v4.pdf)                                                    |                                                              BiLSTM-CRF + BiLSTM-Biaffine                                                              |        ShanghaiTech, UCAS, DAMO        |  ACL2021  |                         94.6                          |                                                         |
@@ -83,23 +83,23 @@
 | [Named Entity Recognition as Dependency Parsing](https://aclanthology.org/2020.acl-main.577.pdf) | BERT-Large + [fastText embeddings](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00051/43387/Enriching-Word-Vectors-with-Subword-Information) | Queen Mary University, Google Research |  ACL2020  |                         92.5                          |                          89.83                          |
 
 ### Nested NER
-| Method                                                                                              |                                                                         Model                                                                          |                  Org.                  |   Year    | [ACE2004](https://catalog.ldc.upenn.edu/LDC2005T09) | [ACE2005](https://catalog.ldc.upenn.edu/LDC2006T06) | [Genia](http://www.geniaproject.org/genia-corpus) | [KBP17](https://catalog.ldc.upenn.edu/LDC2017D55) |
-| :-------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------: | :-------: | :-------------------------------------------------: | :-------------------------------------------------: | :-----------------------------------------------: | :-----------------------------------------------: |
-| [BOPN](https://arxiv.org/pdf/2310.18349.pdf)                                                        |                                                              BERT-Large+BiLSTM+CLN+3DConv                                                              |           CAS, UCAS, Meituan           | EMNLP2023 |                        89.26                        |                        90.39                        |                       82.14                       |                                                   |
-| [PromptNER](https://arxiv.org/pdf/2305.17104.pdf)                                                   |                                                                     RoBERTa-large                                                                      |                  ZJU                   | ACL 2023  |                        88.72                        |                        88.26                        |                                                   |                                                   |
-| [PIQN](https://arxiv.org/pdf/2203.10545v1.pdf)                                                      |                                                                      BERT+2BiLSTM                                                                      |               ZJU, DAMO                |  ACL2022  |                        88.14                        |                        87.42                        |                       81.77                       |                       84.50                       |
-| [Locate and Label](https://arxiv.org/pdf/2105.06804v2.pdf)                                          |                                                                    BERT-large-cased                                                                    |               ZJU, USTC                |  ACL2021  |                        87.41                        |                        86.67                        |                       80.54                       |                       84.05                       |
-| [BART NER](https://arxiv.org/pdf/2106.01223v1.pdf)                                                  |                                                                       BART-large                                                                       |                  FDU                   |  ACL2021  |                        86.84                        |                        84.74                        |                       79.23                       |                                                   |
-| [Named Entity Recognition as Dependency Parsing](https://aclanthology.org/2020.acl-main.577.pdf)    | BERT-Large + [fastText embeddings](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00051/43387/Enriching-Word-Vectors-with-Subword-Information) | Queen Mary University, Google Research |  ACL2020  |                        85.67                        |                        84.61                        |                       78.87                       |                                                   |
-| [Neural Architectures for Nested NER through Linearization](https://arxiv.org/pdf/1908.06926v1.pdf) |                                                                   seq2seq+BERT+Flair                                                                   |           Charles University           |  ACL2019  |                        84.40                        |                        84.33                        |                       78.31                       |                                                   |
+| Method                                                                                              |                                                                         Model                                                                          |                  Org.                  |   Year    | [ACE04] | [ACE05] | [Genia] | [KBP17] |
+| :-------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------: | :-------: | :-----------------: | :-----------------: | :-----------------: | :-----------------: |
+| [BOPN](https://arxiv.org/pdf/2310.18349.pdf)                                                        |                                                              BERT-Large+BiLSTM+CLN+3DConv                                                              |           CAS, UCAS, Meituan           | EMNLP2023 |        89.26        |        90.39        |        82.14        |                     |
+| [PromptNER](https://arxiv.org/pdf/2305.17104.pdf)                                                   |                                                                     RoBERTa-large                                                                      |                  ZJU                   | ACL 2023  |        88.72        |        88.26        |                     |                     |
+| [PIQN](https://arxiv.org/pdf/2203.10545v1.pdf)                                                      |                                                                      BERT+2BiLSTM                                                                      |               ZJU, DAMO                |  ACL2022  |        88.14        |        87.42        |        81.77        |        84.50        |
+| [Locate and Label](https://arxiv.org/pdf/2105.06804v2.pdf)                                          |                                                                    BERT-large-cased                                                                    |               ZJU, USTC                |  ACL2021  |        87.41        |        86.67        |        80.54        |        84.05        |
+| [BART NER](https://arxiv.org/pdf/2106.01223v1.pdf)                                                  |                                                                       BART-large                                                                       |                  FDU                   |  ACL2021  |        86.84        |        84.74        |        79.23        |                     |
+| [Named Entity Recognition as Dependency Parsing](https://aclanthology.org/2020.acl-main.577.pdf)    | BERT-Large + [fastText embeddings](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00051/43387/Enriching-Word-Vectors-with-Subword-Information) | Queen Mary University, Google Research |  ACL2020  |        85.67        |        84.61        |        78.87        |                     |
+| [Neural Architectures for Nested NER through Linearization](https://arxiv.org/pdf/1908.06926v1.pdf) |                                                                   seq2seq+BERT+Flair                                                                   |           Charles University           |  ACL2019  |        84.40        |        84.33        |        78.31        |                     |
 ### Biomedical NER
-| Method                                           |         Model         |                      Org.                      |             Year             | [BC5CDR](https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414) |                          [NCBI-disease](https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/)                           |
-| :----------------------------------------------- | :-------------------: | :--------------------------------------------: | :--------------------------: | :----: | :-------------------------------------------------------------: |
-| [BINDER](https://arxiv.org/pdf/2208.14565v2.pdf) |      PubMedBERT       |               Microsoft Research               |          ICLR 2023           |  91.9  |                              90.9                               |
-| [ConNER](https://arxiv.org/pdf/2210.12949v1.pdf) |     BioBERT/BioLM     |                Korea University                | Oxford University Press 2022 | 91.3 |89.9|
-| [CL-KL](https://arxiv.org/pdf/2105.03654v3.pdf)  |    Bio-BERT + CRF     |                      DAMO                      |           ACL2021            | 90.93  |                              88.96                              |
-| [BioFLAIR](https://arxiv.org/pdf/1908.05760.pdf) | BioFLAIR (V1)+BioELMo | Manipal Institute of Technology, Elsevier Labs |             Arxiv2019             | 89.42  |                              88.85                              |
-| [BioBERT](https://arxiv.org/pdf/1901.08746.pdf)  |        BioBERT        |           Korea University, Clova AI           | Oxford University Press 2020 |        | [87.70(token-level F1)](https://arxiv.org/pdf/2105.03654v3.pdf) |
+| Method                                           |         Model         |                      Org.                      |             Year             | [BC5CDR] |                [NCBI-disease]                |
+| :----------------------------------------------- | :-------------------: | :--------------------------------------------: | :--------------------------: | :-------------------: | :-------------------------------------------------------------: |
+| [BINDER](https://arxiv.org/pdf/2208.14565v2.pdf) |      PubMedBERT       |               Microsoft Research               |          ICLR 2023           |         91.9          |                              90.9                               |
+| [ConNER](https://arxiv.org/pdf/2210.12949v1.pdf) |     BioBERT/BioLM     |                Korea University                | Oxford University Press 2022 |         91.3          |                              89.9                               |
+| [CL-KL](https://arxiv.org/pdf/2105.03654v3.pdf)  |    Bio-BERT + CRF     |                      DAMO                      |           ACL2021            |         90.93         |                              88.96                              |
+| [BioFLAIR](https://arxiv.org/pdf/1908.05760.pdf) | BioFLAIR (V1)+BioELMo | Manipal Institute of Technology, Elsevier Labs |          Arxiv2019           |         89.42         |                              88.85                              |
+| [BioBERT](https://arxiv.org/pdf/1901.08746.pdf)  |        BioBERT        |           Korea University, Clova AI           | Oxford University Press 2020 |                       | [87.70(token-level F1)](https://arxiv.org/pdf/2105.03654v3.pdf) |
 
 
 ## Relation Extraction
@@ -107,10 +107,11 @@
 > **DocRED** is a large scale dataset constructed from Wikipedia and Wikidata. <br>
 > **CDR**(Chemical-Disease Reactions) is a biomedical dataset constructed using PubMed abstracts. <br>
 > **GDA**(Gene-Disease Associations) is also a binary relation classification task that identify Gene and Disease concepts interactions.
+
 ### Document-level
-| Method                                                         |     Model     |                    Org.                    |    Year    | [DocRED](https://github.com/thunlp/DocRED)-Test | [Re-DocRED](https://github.com/tonytan48/Re-DocRED)-Test |
+| Method                                                         |     Model     |                    Org.                    |    Year    | [DocRED]-Test | [Re-DocRED]-Test |
 | :------------------------------------------------------------- | :-----------: | :----------------------------------------: | :--------: | :---------------------------------------------: | :------------------------------------------------------: |
-| [AA-RE](https://arxiv.org/pdf/2310.18604.pdf)                  | RoBERTa-large |             Beihang University             | EMNLP2023  |                      64.98                      |                          81.20                           |
+| [AA-RE*](https://arxiv.org/pdf/2310.18604.pdf)                  | RoBERTa-large |             Beihang University             | EMNLP2023  |                      64.98                      |                          81.20                           |
 | [DREEAM](https://arxiv.org/pdf/2302.08675v1.pdf)               | RoBERTa-large |       Tokyo Institute of Technology        |  ACL2023   |                      64.27                      |                          80.73                           |
 | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)                 | RoBERTa-large |               CMU, Stanford                | NAACL 2022 |                      65.11                      |                            -                             |
 | [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf)                | RoBERTa-large | University of Illinois at Urbana-Champaign |  ACL2022   |                      64.79                      |                            -                             |
@@ -118,12 +119,37 @@
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)                 | RoBERTa-large |                USTC, Baidu                 |  AAAI2021  |                      61.42                      |                            -                             |
 
 
+### Sentence-level
+| Method                                                 |  Model  |               Org.                |    Year    | TACRED | SemEval |
+| :----------------------------------------------------- | :-----: | :-------------------------------: | :--------: | :----: | :-----: |
+| [SuRE*](https://arxiv.org/pdf/2205.09837.pdf)           | PEGASUS | University of Southern California | EMNLP 2022 |  75.1  |  89.7   |
+| [GPT-RE](https://arxiv.org/pdf/2305.02105.pdf)         |  GPT3   |         Kyoto University          | EMNLP 2023 | 70.97  |  91.82  |
+| [NLI](https://aclanthology.org/2021.emnlp-main.92.pdf) | DeBERTa |       Ixa NLP Group,UPV/EHU       | EMNLP 2021 |  73.9  |    -    |
+
 ### Biomedical
-| Method                                          |  Model  |                    Org.                    |    Year    |  CDR  | GDA   |
-| :---------------------------------------------- | :-----: | :----------------------------------------: | :--------: | :---: | ----- |
+| Method                                          |  Model  |                    Org.                    |    Year    |  CDR  |  GDA  |
+| :---------------------------------------------- | :-----: | :----------------------------------------: | :--------: | :---: | :---: |
 | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)  | SciBERT |               CMU, Stanford                | NAACL 2022 | 79.0  | 87.1  |
 | [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf) | SciBERT | University of Illinois at Urbana-Champaign |  ACL2022   | 70.63 | 84.54 |
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)  | SciBERT |                USTC, Baidu                 |  AAAI2021  | 68.7  | 83.7  |
+
+## Joint Entity and Relation Extraction
+| Method                                                                |   Encoder    |    Year    |      | [ACE05] |      |      | [ACE04] |      |      | [SciERC] |      |
+| :-------------------------------------------------------------------- | :----------: | :--------: | :--: | :-----: | :--: | :--: | :-----: | :--: | :--: | :------: | :--: |
+|                                                                       |              |            | Ent  |   Rel   | Rel+ | Ent  |   Rel   | Rel+ | Ent  |   Rel    | Rel+ |
+| [HGERE*](https://aclanthology.org/2023.emnlp-main.467.pdf)             | BERT/SciBERT | EMNLP 2023 | 90.2 |  70.7   | 67.5 | 89.9 |  68.2   | 64.2 | 74.9 |   55.7   | 43.6 |
+| [HGERE*](https://aclanthology.org/2023.emnlp-main.467.pdf)             |    ALBERT    | EMNLP 2023 | 91.9 |  73.5   | 70.8 | 91.9 |  71.9   | 68.3 |      |          |      |
+| [GCN](https://aclanthology.org/P19-1131.pdf)                          |     BERT     |  ACL 2019  | 90.2 |  69.6   | 66.5 |  90  |  67.6   | 63.5 | 74.1 |   54.8   | 42.9 |
+| [GCN](https://aclanthology.org/P19-1131.pdf)                          |    ALBERT    |  ACL 2019  | 91.7 |  73.1   | 69.9 |  92  |  71.5   | 67.9 |      |          |      |
+| [Nguyen et al., 2021](https://aclanthology.org/2021.naacl-main.3.pdf) |     BERT     |  ACL 2021  | 88.9 |  68.9   |      |      |         |      |      |          |      |
+| [DyGIE++](https://aclanthology.org/D19-1585.pdf)                      |     BERT     |  ACL 2019  | 88.6 |  63.4   |      |      |         |      | 67.5 |   48.4   |      |
+| [DyGIE++](https://aclanthology.org/D19-1585.pdf)                      |    albert    |  ACL 2019  | 89.5 |  67.6   | 64.3 | 88.6 |  63.3   | 59.6 |      |          |      |
+| [PURE](https://aclanthology.org/2021.naacl-main.5.pdf)                |     BERT     |  ACL 2021  | 90.1 |  67.7   | 64.8 | 89.2 |  63.9   | 60.1 | 68.9 |   50.1   | 36.8 |
+| [PURE](https://aclanthology.org/2021.naacl-main.5.pdf)                |    ALBERT    |  ACL 2021  | 90.9 |  69.4   | 67.0 | 90.3 |  66.1   | 62.2 |      |          |      |
+| MFVI                                                                  |     BERT     |            | 90.2 |  69.7   | 67.1 | 89.7 |  67.4   | 63.4 | 73.3 |   54.7   | 42.5 |
+| MFVI                                                                  |    ALBERT    |            | 91.6 |  72.7   | 70.1 | 89.9 |  68.5   | 65.1 |      |          |      |
+| [PL-Marker(re)*](https://aclanthology.org/2022.acl-long.337.pdf)       |     BERT     |  ACL 2022  |  90  |  69.8   | 66.7 | 89.5 |  66.6   | 62.1 | 71.3 |   52.3   | 40.2 |
+| [PL-Marker(re)*](https://aclanthology.org/2022.acl-long.337.pdf)       |    ALBERT    |  ACL 2022  | 91.5 |  72.9   | 70.2 | 91.6 |  70.2   | 66.6 |      |          |      |
 
 ## Key Information Extraction
 > **SROIE** : Scanned receipts OCR and information extraction <br>
@@ -132,12 +158,12 @@
 > F1 for all.<br>
 > default: BASE-MODEL
 
-| Model                                                                                                                                                         |                               Org.                                |    Year     | Modality | [SROIE](https://rrc.cvc.uab.es/?ch=13) | [CORD](https://github.com/clovaai/cord)  | [FUNSD](https://guillaumejaume.github.io/FUNSD/) |
+| Model                                                                                                                                                         |                               Org.                                |    Year     | Modality | [SROIE] | [CORD]  | [FUNSD] |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------: | :---------: | :------: | :------------------------------------: | :---: | :---: |
 | [GeoLayoutLM-Large](https://arxiv.org/pdf/2304.10759v1.pdf)                                                                                                   |                               DAMO                                |  CVPR 2023  |  T+L+V   |                   -                    | 97.97 | 92.86 |
 | [LayoutLMv3](https://arxiv.org/pdf/2204.08387v3.pdf)                                                                                                          |          Sun Yat-sen University, Microsoft Research Asia          | ACM MM 2022 |  T+L+V   |                 95.30                  | 96.56 | 90.29 |
 | [LILT](https://arxiv.org/pdf/2202.13669v1.pdf)                                                                                                                |                               SCUT                                |  ACL 2022   |  T+L+V   |                 97.65                  | 95.11 |   -   |
-| [GenKIE](https://arxiv.org/pdf/2310.16131.pdf)                                                                                                                | University of Michigan, National University of Defense Technology | EMNLP 2023  |  T+L+V   |                 97.40                  | 95.75 | 83.45 |
+| [GenKIE*](https://arxiv.org/pdf/2310.16131.pdf)                                                                                                                | University of Michigan, National University of Defense Technology | EMNLP 2023  |  T+L+V   |                 97.40                  | 95.75 | 83.45 |
 | [DocFormer](https://openaccess.thecvf.com/content/ICCV2021/papers/Appalaraju_DocFormer_End-to-End_Transformer_for_Document_Understanding_ICCV_2021_paper.pdf) |                              AWS AI                               |  ICCV2021   |  T+L+V   |                   -                    | 96.33 | 83.34 |
 | [StrucText](https://dl.acm.org/doi/10.1145/3474085.3475345)                                                                                                   |                               Baidu                               | ACM MM 2021 |  T+L+V   |                 96.88                  |   -   | 83.09 |
 
@@ -150,28 +176,22 @@
 | Model                                                            |      Method       |                    Org.                    |     Year     | MRR  | H@1  | H@3  | H@10 |
 | ---------------------------------------------------------------- | :---------------: | :----------------------------------------: | :----------: | :--: | :--: | :--: | :--: |
 | [MoCoSA](https://arxiv.org/pdf/2308.08204v1.pdf)                 | description-based |            Kuaishou Technology             |     2023     | 69.6 | 62.4 | 73.7 | 82.0 |
-| [SimKGC](https://arxiv.org/pdf/2203.02167.pdf)                   | description-based | Microsoft Research Asia, Yuanfudao AI Lab  |   ACL 2022   | 67.1 | 58.7 | 73.1 | 81.7 |
+| [SimKGC*](https://arxiv.org/pdf/2203.02167.pdf)                   | description-based | Microsoft Research Asia, Yuanfudao AI Lab  |   ACL 2022   | 67.1 | 58.7 | 73.1 | 81.7 |
 | [CSPromp-KG](https://aclanthology.org/2023.findings-acl.729.pdf) |  structure-based  |      Nanyang Technological University      |   ACL 2023   | 57.5 | 52.2 | 59.6 | 67.8 |
 | [KG-S2S](https://aclanthology.org/2022.coling-1.352.pdf)         | description-based |      Nanyang Technological University      | COLING 2022  | 57.4 | 53.1 | 59.5 | 66.1 |
-| [**NBFNet**](https://arxiv.org/pdf/2106.06935v4.pdf)                 |  structure-based  |         Mila - Québec AI Institute         | NeurIPS 2021 | 55.1 | 49.7 | 57.3 | 66.6 |
+| [NBFNet*](https://arxiv.org/pdf/2106.06935v4.pdf)                 |  structure-based  |         Mila - Québec AI Institute         | NeurIPS 2021 | 55.1 | 49.7 | 57.3 | 66.6 |
 | [C-LMKE](https://arxiv.org/pdf/2206.12617.pdf)                   | description-based |              Fudan University              |  IJCAI 2022  | 59.8 | 48.0 | 67.5 | 80.6 |
 | [TuckER](https://aclanthology.org/D19-1522.pdf)                  |  structure-based  | University of Edinburgh, Samsung AI Centre | COLING 2019  | 47.0 | 44.3 | 48.2 | 52.6 |
 
-## ERE
-
-|		                                Method                                |Model       |     Year     |		    |	Ace05 |       |	      |	Ace04	|       |	      |	SciERC|       |
-| ----------------------------------------------------------------------- |------------|--------------|------ |------ |------ |------ |------ |------ |------ |------ |------ |
-|                                                                         |            |              | Ent	  |	Rel	  |	Rel+	|	Ent  	|	Rel	  |	Rel+	|	Ent	  |	Rel	  |	Rel+  |
-|	[HGERE](https://aclanthology.org/2023.emnlp-main.467.pdf)	              |   bert     |   EMNLP 2023 |	90.2	|	70.7	|	67.5	|	89.9	|	68.2	|	64.2	|	74.9	|	55.7	|	43.6  |
-|	[HGERE](https://aclanthology.org/2023.emnlp-main.467.pdf)	              |   albert   |   EMNLP 2023 |	91.9	|	73.5	|	70.8	|	91.9	|	71.9	|	68.3	|		    |		    |	      |
-|	[GCN](https://aclanthology.org/P19-1131.pdf)                            |   bert     |   ACL 2019   |	90.2	|	69.6	|	66.5	|	90	  |	67.6	|	63.5	|	74.1	|	54.8	|	42.9  |
-|	[GCN](https://aclanthology.org/P19-1131.pdf)	                          |   albert   |   ACL 2019   |	91.7	|	73.1	|	69.9	|	92	  |	71.5	|	67.9	|		    |		    |	      |
-|	[Nguyen et al., 2021](https://aclanthology.org/2021.naacl-main.3.pdf)   |   bert     |   ACL 2021   | 88.9  |	68.9  |	      |		    |		    |	      |		    |		    |	      |
-| [Wang and Lu, 2020](https://aclanthology.org/D19-1585.pdf)              |   bert     |   ACL 2019   |	88.6  |	63.4  |	      |		    |		    |	      |	67.5  |	48.4  |	      |
-| [Wang and Lu, 2020](https://aclanthology.org/D19-1585.pdf)              |   albert   |   ACL 2019   |	89.5 	|	67.6	|	64.3	|	88.6  |	63.3	|	59.6	|		    |		    |	      |
-| [Zhong and Chen, 2021](https://aclanthology.org/2021.naacl-main.5.pdf)  |   bert     |   ACL 2021   |	90.1	|	67.7	|	64.8	|	89.2	|	63.9	|	60.1	|	68.9	|	50.1	|	36.8  |
-| [Zhong and Chen, 2021](https://aclanthology.org/2021.naacl-main.5.pdf)  |   albert   |   ACL 2021   |	90.9  |	69.4	|	67.0  |	90.3  |	66.1  |	62.2	|		    |		    |	      |
-|	MFVI	                                                                  |   bert     |              |	90.2	|	69.7	|	67.1	|	89.7	|	67.4	|	63.4	|	73.3	|	54.7	|	42.5  |
-|	MFVI	                                                                  |   albert   |              |	91.6	|	72.7	|	70.1	|	89.9	|	68.5	|	65.1	|		    |		    |	      |
-|	[PL_Marker(re)](https://aclanthology.org/2022.acl-long.337.pdf)         |   bert	   |   ACL 2022   |	90	  |	69.8	|	66.7	|	89.5	|	66.6	|	62.1	|	71.3	|	52.3	|	40.2  |
-|	[PL_Marker(re)](https://aclanthology.org/2022.acl-long.337.pdf)	        |   albert   |   ACL 2022   |	91.5	|	72.9	|	70.2	|	91.6	|	70.2	|	66.6	|		    |		    |	      |
+[ACE05]: https://catalog.ldc.upenn.edu/LDC2006T06
+[ACE04]: https://catalog.ldc.upenn.edu/LDC2005T09
+[DocRED]: https://github.com/thunlp/DocRED
+[Re-DocRED]: https://github.com/tonytan48/Re-DocRED
+[Genia]: http://www.geniaproject.org/genia-corpus
+[KBP17]: https://catalog.ldc.upenn.edu/LDC2017D55
+[BC5CDR]: https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414
+[NCBI-disease]: https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/
+[SROIE]: https://rrc.cvc.uab.es/?ch=13
+[CORD]: https://github.com/clovaai/cord
+[FUNSD]: https://guillaumejaume.github.io/FUNSD/
+[SciERC]: http://nlp.cs.washington.edu/sciIE/
