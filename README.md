@@ -111,7 +111,8 @@
 ### Document-level
 | Method                                                         |     Model     |                    Org.                    |    Year    | [DocRED]-Test | [Re-DocRED]-Test |
 | :------------------------------------------------------------- | :-----------: | :----------------------------------------: | :--------: | :---------------------------------------------: | :------------------------------------------------------: |
-| [AA-RE*](https://arxiv.org/pdf/2310.18604.pdf)                  | RoBERTa-large |             Beihang University             | EMNLP2023  |                      64.98                      |                          81.20                           |
+| [DocRE-CLiP*](https://browse.arxiv.org/pdf/2401.11800.pdf)     |      BERT     | Indraprastha Institute of Information Technology | AAAI2024 |                     68.51                   |                          81.55                          |
+| [AA-RE](https://arxiv.org/pdf/2310.18604.pdf)                  | RoBERTa-large |             Beihang University             | EMNLP2023  |                      64.98                      |                          81.20                           |
 | [DREEAM](https://arxiv.org/pdf/2302.08675v1.pdf)               | RoBERTa-large |       Tokyo Institute of Technology        |  ACL2023   |                      64.27                      |                          80.73                           |
 | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)                 | RoBERTa-large |               CMU, Stanford                | NAACL 2022 |                      65.11                      |                            -                             |
 | [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf)                | RoBERTa-large | University of Illinois at Urbana-Champaign |  ACL2022   |                      64.79                      |                            -                             |
