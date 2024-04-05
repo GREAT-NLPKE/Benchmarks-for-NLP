@@ -112,6 +112,7 @@
 |Reproduced| Method                                                         |     Model     |                       Org.                       |    Year    | [DocRED]-Test | [Re-DocRED]-Test |
 | :-: | :------------------------------------------------------------- | :-----------: | :----------------------------------------------: | :--------: | :-----------: | :--------------: |
 |     | [DocRE-CLiP](https://browse.arxiv.org/pdf/2401.11800.pdf)      |     BERT      | Indraprastha Institute of Information Technology |  AAAI2024  |   **68.51**   |    **81.55**     |
+|     | [FCDS](https://arxiv.org/pdf/2403.01886.pdf)                   |     DeBERTa-large     | University of Electronic Science and Technology of China |  COLING 2024  |   65.86   |    -    |
 |✅| [AA-RE](https://arxiv.org/pdf/2310.18604.pdf)                  | RoBERTa-large |                Beihang University                | EMNLP2023  |     64.98     |      81.20       |
 |     | [DREEAM](https://arxiv.org/pdf/2302.08675v1.pdf)               | RoBERTa-large |          Tokyo Institute of Technology           |  ACL2023   |     64.27     |      80.73       |
 |     | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)                 | RoBERTa-large |                  CMU, Stanford                   | NAACL 2022 |     65.11     |        -         |
@@ -131,6 +132,7 @@
 | Method                                          |  Model  |                    Org.                    |    Year    |   CDR    |    GDA    |
 | :---------------------------------------------- | :-----: | :----------------------------------------: | :--------: | :------: | :-------: |
 | [SAIS](https://arxiv.org/pdf/2109.12093v2.pdf)  | SciBERT |               CMU, Stanford                | NAACL 2022 | **79.0** | **87.1** |
+| [FCDS](https://arxiv.org/pdf/2403.01886.pdf)    |  DeBERTa-large | University of Electronic Science and Technology of China |  COLING 2024 |   72.62   |   87.39   |
 | [EIDER](https://arxiv.org/pdf/2106.08657v2.pdf) | SciBERT | University of Illinois at Urbana-Champaign |  ACL2022   |  70.63   |   84.54   |
 | [SSAN](https://arxiv.org/pdf/2102.10249v1.pdf)  | SciBERT |                USTC, Baidu                 |  AAAI2021  |   68.7   |   83.7    |
 
