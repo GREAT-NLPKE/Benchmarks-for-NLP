@@ -151,6 +151,6 @@
 | [SimKGC](https://arxiv.org/pdf/2203.02167.pdf)                   | description-based | Microsoft Research Asia, Yuanfudao AI Lab  |   ACL 2022   | 67.1 | 58.7 | 73.1 | 81.7 |
 | [CSPromp-KG](https://aclanthology.org/2023.findings-acl.729.pdf) |  structure-based  |      Nanyang Technological University      |   ACL 2023   | 57.5 | 52.2 | 59.6 | 67.8 |
 | [KG-S2S](https://aclanthology.org/2022.coling-1.352.pdf)         | description-based |      Nanyang Technological University      | COLING 2022  | 57.4 | 53.1 | 59.5 | 66.1 |
-| [**NBFNet**](https://arxiv.org/pdf/2106.06935v4.pdf)                 |  structure-based  |         Mila - Québec AI Institute         | NeurIPS 2021 | 55.1 | 49.7 | 57.3 | 66.6 |
+| [PMD](https://arxiv.org/pdf/2401.12997)                 |  description-based  |         Tsinghua University         | 2024 | 67.8 | 58.8 | 73.7 | 82.0 |
 | [C-LMKE](https://arxiv.org/pdf/2206.12617.pdf)                   | description-based |              Fudan University              |  IJCAI 2022  | 59.8 | 48.0 | 67.5 | 80.6 |
-| [TuckER](https://aclanthology.org/D19-1522.pdf)                  |  structure-based  | University of Edinburgh, Samsung AI Centre | COLING 2019  | 47.0 | 44.3 | 48.2 | 52.6 |
+| [KICGPT](https://arxiv.org/pdf/2402.02389)                  |  description-based  | South University of Science and Technology | EMNLP 2024  | 56.4 | 47.8 | 61.2 | 67.7 |
